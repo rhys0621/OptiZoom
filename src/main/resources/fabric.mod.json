@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "opti-zoom",
+  "version": "${version}",
+  "name": "OptiZoom",
+  "description": "A simple no bloat mod that adds Optifines zoom to Fabric",
+  "authors": [
+    "Rhys"
+  ],
+  "contact": {},
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "me.rhys.optizoom.Mod"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "optizoom.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "fabric": "*",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
+  }
+}
