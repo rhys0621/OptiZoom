@@ -2,15 +2,14 @@ package me.rhys.optizoom.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import me.rhys.optizoom.util.KeyboardHelper;
-import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.Camera;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(GameRenderer.class)
-public class GameRendererMixin {
-
-    @ModifyReturnValue(method = "getFov", at = @At(value = "RETURN"))
-    public float modifyFov(float original) {
+@Mixin(Camera.class)
+public class CameraMixin {
+    @ModifyReturnValue(method = {"calculateFov", "calculateHudFov"}, at = @At(value = "RETURN"))
+    public float hookFov(float original) {
         if (KeyboardHelper.hasKeyPressed()) {
             original /= 3;
         }
