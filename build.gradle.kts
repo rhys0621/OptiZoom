@@ -4,9 +4,9 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-val minecraftVersion = "26.1"
+val minecraftVersion = "26.1.1"
 val loaderVersion = "0.18.5"
-val fabricVersion = "0.144.3+26.1"
+val fabricVersion = "0.145.3+26.1.1"
 
 group = "me.rhys"
 version = "1.1"
