@@ -4,12 +4,12 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-val minecraftVersion = "26.1.1"
-val loaderVersion = "0.18.5"
-val fabricVersion = "0.145.3+26.1.1"
+val minecraftVersion = "26.2"
+val loaderVersion = "0.19.3"
+val fabricVersion = "0.152.2+26.2"
 
 group = "me.rhys"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
